@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input id="a" type="number" placeholder="Число 1">
+    <input id="b" type="number" placeholder="Число 2">
+    <button onclick="calc()">Посчитать</button>
+    <br><br>
+    <img id="img" src="zhaba.jpg" hidden>
+    <script>
+        function sum(x, y) {
+            return x + y;
+        }
+        function calc() {
+            let res = sum(Number(document.getElementById('a').value), Number(document.getElementById('b').value));
+            document.body.style.backgroundColor = "white";
+            document.getElementById('img').hidden = true;
+            if (res > 0) {
+                document.body.style.backgroundColor = "red";
+            } else if (res < 0) {
+                document.body.style.backgroundColor = "green";
+            } else {
+                document.getElementById('img').hidden = false;
+            }
+        }
+    </script>
+</body>
+</html>
